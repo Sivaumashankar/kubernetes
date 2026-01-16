@@ -5,7 +5,7 @@ kind: ClusterConfig
 
 metadata:
   name: expense
-  region: us-east-l
+  region: us-east-1
 
 managedNodeGroups: #nodGroups ani isthe maname managa e chaeli  , manage isthe aws takecare
   - name: expense
