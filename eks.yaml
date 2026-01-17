@@ -1,5 +1,23 @@
-# A simple example of ClusterConfig object:
----
+# # A simple example of ClusterConfig object:
+# ---
+# apiVersion: eksctl.io/v1alpha5
+# kind: ClusterConfig
+
+# metadata:
+#   name: expense
+#   region: us-east-1
+
+# # managedNodeGroups: #nodGroups ani isthe maname managa e chaeli  , manage isthe aws takecare
+# #   - name: expense
+# #     instanceTypes: ["m5.large","c3.large","c4.large","c5.large"]
+# #     desiredCapacity: 3
+# #     spot: true
+
+# managedNodeGroups:
+#   - name: expense-ng
+#     instanceType: t3.medium
+#     desiredCapacity: 2
+
 apiVersion: eksctl.io/v1alpha5
 kind: ClusterConfig
 
@@ -7,13 +25,8 @@ metadata:
   name: expense
   region: us-east-1
 
-# managedNodeGroups: #nodGroups ani isthe maname managa e chaeli  , manage isthe aws takecare
-#   - name: expense
-#     instanceTypes: ["m5.large","c3.large","c4.large","c5.large"]
-#     desiredCapacity: 3
-#     spot: true
-
 managedNodeGroups:
-  - name: expense-ng
-    instanceType: t3.medium
-    desiredCapacity: 2
+  - name: expense
+    instanceTypes: ["m5.large", "c3.large","c4.large","c5.large"]
+    desiredCapacity: 3
+    spot: true
